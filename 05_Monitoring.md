@@ -3,7 +3,7 @@
 ## General
 
 This is an optional extra task you can work on. Focus of the task is monitoring your demo web app. App Service is deeply integrated with App Insights. App Insights is a feature within Azure Monitor. To monitor your Web App you have to create a new App Insights resource that is linked to use the **[Kusto query language](https://docs.microsoft.com/de-de/azure/data-explorer/kusto/concepts/)** to retrieve the **telemetry** data. The picture below illustrates this:
-<br><img src="./images/MonitoringOverview.PNG" width="400"/>
+<br><img src="./images/MonitoringOverview.png" width="400"/>
 
 To watch your **telemetry** in App Insight we will use the portal. We created special users for portal access. Contact one of us to get the credentials for it. The next two big steps are:
 1. Extend your infra pipeline to create an App Insights resource and link it to your Web App
@@ -70,13 +70,13 @@ First contact one of us to grab a user along with the credentials.
 To login to the Azure Portal enter "portal.azure.com" in the browser. Use the credentials given to you to login.
 
 Navigate in the portal to the resource group "ws-devops".
-<br><img src="./images/MonitorApInsightsRG.PNG" width="400"/>
+<br><img src="./images/MonitorApInsightsRG.png" width="400"/>
 
 Open your App Insights instance and by clicking on the entry representing your instance. Click in the main menu on the left hand side on "Logs". Click away the welcome and query screen.
-<br><img src="./images/MonitorApInsightsLogs.PNG" width="400"/>
+<br><img src="./images/MonitorApInsightsLogs.png" width="400"/>
 
 You will see detail screen where you can enter your Kusto query. The screenshot below explains a bit the major controls.
-<br><img src="./images/MonitorApInsightsKusto.PNG" width="400"/>
+<br><img src="./images/MonitorApInsightsKusto.png" width="400"/>
 
 The simplest Kusto query is just to state the name of the log table you are interested in as shown below. If you execute this query by pressing the previously outlined button you get the result. Note that there is a small delay until the data is visible in App Insights (app. 1 minute).
 ```

@@ -2,7 +2,7 @@
 
 ## General
 
-This is an optional extra task you can work on. Focus of the task is monitoring your demo web app. App Service is deeply integrated with App Insights. App Insights is a feature within Azure Monitor. To monitor your Web App you have to create a new App Insights resource that is linked to your Web App. Once that link is **established,** you monitoring telemetry is forwarded to App Insights. Within App Insights **,** you can ~~then~~ use the **[Kusto query language](https://docs.microsoft.com/de-de/azure/data-explorer/kusto/concepts/)** to retrieve the **telemetry** data. The picture below illustrates this:
+This is an optional extra task you can work on. Focus of the task is monitoring your demo web app. App Service is deeply integrated with App Insights. App Insights is a feature within Azure Monitor. To monitor your Web App you have to create a new App Insights resource that is linked to use the **[Kusto query language](https://docs.microsoft.com/de-de/azure/data-explorer/kusto/concepts/)** to retrieve the **telemetry** data. The picture below illustrates this:
 <br><img src="./images/MonitoringOverview.PNG" width="400"/>
 
 To watch your **telemetry** in App Insight we will use the portal. We created special users for portal access. Contact one of us to get the credentials for it. The next two big steps are:
@@ -60,7 +60,7 @@ The command follows thesame pattern as above where we stored the location of the
 
 Now let's use our variable to link the Web App to App Insights. This requires updating a few **application** settings inside the Web App. One is of course our **instrumentation key**. The command below shows how that is done. 
 ```
-az webapp config appsettings set --name $webapp --resource-group $resourcegroup --settings APPINSIGHTS_INSTRUMENTATIONKEY=$instrumentationKey APPLICATIONINSIGHTS_CONNECTION_STRING=InstrumentationKey=$instrumentationKey ApplicationInsightsAgent_EXTENSION_VERSION=~2
+az webapp config appsettings set --name $webapp --resource-group $rgName --settings APPINSIGHTS_INSTRUMENTATIONKEY=$instrumentationKey APPLICATIONINSIGHTS_CONNECTION_STRING=InstrumentationKey=$instrumentationKey ApplicationInsightsAgent_EXTENSION_VERSION=~2
 ```
 
 ## Monitor your Web App in App Insights

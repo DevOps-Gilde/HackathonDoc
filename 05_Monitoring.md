@@ -41,7 +41,7 @@ To run Azure CLI commands we first have to create first the application insights
 az extension add -n application-insights
 ```
 
-With the extension in place we can now create the application insights resource. In contrast to the command for the Web App we have to specify the location. We will use the same location as the location of the resource group. To achieve we will store the location in a shell variable `rgName`. The assigned value will be the result of an azure cli command. Therefore, the command needs to embedded in backticks.
+With the extension in place we can now create the application insights resource. In contrast to the command for the Web App we have to specify the location. We will use the same location as the location of the resource group. To achieve we will store the location in a shell variable `locName`. The assigned value will be the result of an azure cli command. Therefore, the command needs to embedded in backticks.
 ```
 locName=`az group show --name ${{ secrets.rg }} --query location --output tsv`
 ```
